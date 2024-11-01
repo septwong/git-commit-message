@@ -27,7 +27,7 @@ Commit message 包括三个部分：Header，Body 和 Footer。
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
 
-> git commit - m 'feat(common): util 中加入节流函数'
+> git commit - m 'feat(common): util 中加入节流函数'  
 > `-m` 参数 : 指定 commit message
 
 ### type
