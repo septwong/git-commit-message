@@ -2,6 +2,9 @@
 
 > Git 提交规范
 
+- [git 指令](./docs/git_command.md)
+- [清理Github仓库中敏感信息](./docs/clean_sensitive_file.md)
+
 ## Git commit
 
 Commit message 包括三个部分：Header，Body 和 Footer。
