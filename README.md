@@ -50,7 +50,7 @@ Commit message 包括三个部分：Header，Body 和 Footer。
 |`ci`|持续集成|持续集成相关|#F44336|浅红色|
 |`wip`|开发中|开发中|#9E9E9E|灰色|
 |`types`|类型定义|类型定义|#CE93D8|浅紫色|
-|`release`|发布|发布版本|#2ecc71|鲜艳的绿|
+|`release`|发布|发布版本|#2ECC71|鲜艳绿色|
 
 ### scope
 
