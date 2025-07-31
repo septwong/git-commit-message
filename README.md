@@ -4,21 +4,23 @@
 
 - [Git 指令](./docs/git-command.md)
 - [清理Github仓库中敏感信息](./docs/clean_sensitive_file.md)
+- [Angular Commit Message Conventions](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 
 ## Git commit
 
 Commit message 包括三个部分：Header，Body 和 Footer。
 
+Header 的格式比较特殊，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+
 ```text
 <type>(<scope>): <subject>
-// <BLANK LINE>
+<BLANK LINE>
 <body>
-// <BLANK LINE>
+<BLANK LINE>
 <footer>
 ```
 
 > Header 是必需的，Body 和 Footer 可以省略。
-> Header 部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
 
 ```text
 <type>(<scope>): <subject>
@@ -27,33 +29,45 @@ Commit message 包括三个部分：Header，Body 和 Footer。
   │       │
   │       └─⫸ Commit Scope(可选): common | 业务模块[挂号 就诊人 用户子系统] 等等
   │
-  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|style|test
 ```
 
 > git commit - m 'feat(common): util 中加入节流函数'  
 > `-m` 参数 : 指定 commit message
 
+*示例：*
+
+```text
+docs(changelog): update changelog to beta.5
+```
+
+```text
+fix(release): need to depend on latest rxjs and zone.js
+
+The version in our package.json gets copied to the one we publish, and users need the latest of these.
+```
+
 ### type
 
 |#|字符|文案|备注|颜色|规范|
 |:---:|:---:|:---|:---|:---:|:---:|
-||`build`|构建|对构建系统或外部依赖项进行了更改（示例范围：gulp、broccoli、npm）|`#d93f0b`|Angular|
-||`ci`|持续集成|对 CI 配置文件和脚本进行了更改（示例范围：Travis、Circle、BrowserStack、SauceLabs）|`#c5def5`|Angular|
-||`docs`|文档注释|对文档进行了修改|`#0075ca`|Angular|
-||`feat`|功能|增加新的特征|`#a2eeef`|Angular|
-||`fix`|修复|修复 BUG|`#d73a4a`|Angular|
-||`perf`|性能|提高性能的代码更改|`#5319e7`|Angular|
-||`refactor`|重构|既不修复错误也不添加功能的代码更改|`#006b75`|Angular|
-||`style`|样式|不影响代码含义的更改（空格、格式、缺少分号等）|`#5c879d`|Angular|
-||`test`|测试|添加缺失的测试或更正现有的测试|`#fbca04`|Angular|
+|1|`build`|构建|对构建系统或外部依赖项进行了更改（示例范围：gulp、broccoli、npm）|`#d93f0b`|Angular|
+|2|`ci`|持续集成|对 CI 配置文件和脚本进行了更改（示例范围：Travis、Circle、BrowserStack、SauceLabs）|`#c5def5`|Angular|
+|3|`docs`|文档注释|对文档进行了修改|`#0075ca`|Angular|
+|4|`feat`|功能|增加新的特征|`#a2eeef`|Angular|
+|5|`fix`|修复|修复 BUG|`#d73a4a`|Angular|
+|6|`perf`|性能|提高性能的代码更改|`#5319e7`|Angular|
+|7|`refactor`|重构|既不修复错误也不添加功能的代码更改|`#006b75`|Angular|
+|8|`style`|样式|不影响代码含义的更改（空格、格式、缺少分号等）|`#5c879d`|Angular|
+|9|`test`|测试|添加缺失的测试或更正现有的测试|`#fbca04`|Angular|
 |-|-|-|-|-|-|-|
-||`chore`|琐事|依赖项/修改脚手架配置等|`#424242`|-|
-||`revert`|撤销|撤消更改|`#E91E63`|-|
-||`workflow`|工作流|工作流程改进|`#8BC34A`|-|
-||`wip`|开发中|开发中|`#9E9E9E`|-|
-||`types`|类型定义|类型定义|`#CE93D8`|-|
-||`release`|发布|发布版本|`#2ECC71`|-|
-||`opt`|优化|优化业务代码|`#FF9800`|-|
+|-|`chore`|琐事|依赖项/修改脚手架配置等|`#424242`|-|
+|-|`revert`|撤销|撤消更改|`#E91E63`|-|
+|-|`workflow`|工作流|工作流程改进|`#8BC34A`|-|
+|-|`wip`|开发中|开发中|`#9E9E9E`|-|
+|-|`types`|类型定义|类型定义|`#CE93D8`|-|
+|-|`release`|发布|发布版本|`#2ECC71`|-|
+|-|`opt`|优化|优化业务代码|`#FF9800`|-|
 
 ### scope
 
